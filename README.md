@@ -5,8 +5,8 @@ This repository contains the machine learning pipeline for automated oil spill d
 The pipeline utilizes a custom trained **`SegFormer-B2`** instance segmentation model
 
 ## Hardware
-* **`Training Computer`**: NVIDIA RTX 5080 (64GB RAM)
-* **`Planned`**: NVIDIA Jetson Orin Nano Super Developer Kit
+* **Training Computer**: NVIDIA RTX 5080 (64GB RAM)
+* **Planned**: NVIDIA Jetson Orin Nano Super Developer Kit
 
 ## Planned Features
 *   **Edge Deployment**: Porting the pipeline to a NVIDIA Jetson Orin Nano to process intermittent live feed captures (e.g., 1 frame every 3 seconds) along a automated flight path.
