@@ -8,6 +8,13 @@ The pipeline utilizes a custom trained **`SegFormer-B2`** instance segmentation 
 * **`Training Computer`**: NVIDIA RTX 5080 (64GB RAM)
 * **`Planned`**: NVIDIA Jetson Orin Nano Super Developer Kit
 
+## Planned Features
+*   **Edge Deployment**: Porting the pipeline to a NVIDIA Jetson Orin Nano to process intermittent live feed captures (e.g., 1 frame every 3 seconds) along a automated flight path.
+*   **Geospatial Mapping (GIS)**: Extracting geographic coordinates from the processed frames to map the entire detected oil spill footprint onto an aerial GIS map.
+*   **Geometric Targeting**: Utilize live telemetry data from the drone altitude, drone angle, camera gimbal angle, sensor megapixels, and field of view (FOV), to calculate the exact center of the largest detected spill mass.
+*   **Autonomous Flight Control**: Translate the calculated spill center into usable flight instructions, feeding coordinates to the drone to autonomously route the drone for physical water sampling.
+
+
 ## Repository Structure
 
 This repository is currently ran by four main scripts to handle the entire workflow
