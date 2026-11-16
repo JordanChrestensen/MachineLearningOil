@@ -2,7 +2,7 @@
 
 This repository contains the machine learning pipeline for automated oil spill detection and segmentation
 
-The pipeline utilizes a custom trained **`SegFormer-B2`** instance segmentation model
+The pipeline utilizes a custom trained [**SegFormer-B2**](https://huggingface.co/nvidia/segformer-b2-finetuned-ade-512-512) instance segmentation model
 
 ## Hardware
 * **Training Computer**: NVIDIA RTX 5080 (64GB RAM)
