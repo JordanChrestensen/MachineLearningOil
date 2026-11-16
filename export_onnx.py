@@ -2,7 +2,7 @@ import torch
 from transformers import SegformerForSemanticSegmentation
 
 # Translates model to a universal mathmatical graph called Open Neural Network Exchange (ONNX)
-model = SegformerForSemanticSegmentation.from_pretrained(r"C:\Users\Jordan\Downloads\machinelearningoil\segformer-oil-spill-final")
+model = SegformerForSemanticSegmentation.from_pretrained(r"path_to_your_model_directory") # Update this path to your dataset directory
 model.eval()
 model.cuda()
 
