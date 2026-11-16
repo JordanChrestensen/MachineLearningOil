@@ -2,24 +2,25 @@
 
 This repository contains the machine learning pipeline for automated oil spill detection and segmentation
 
-The pipeline utilizes a custom trained **SegFormer-B2** instance segmentation model
+The pipeline utilizes a custom trained **`SegFormer-B2`** instance segmentation model
 
 ## Hardware
-    **Training Computer:** NVIDIA RTX 5080 (64GB RAM)
+**`1Training Computer`**: NVIDIA RTX 5080 (64GB RAM)
+**`Planned`**: NVIDIA Jetson Orin Nano Super Developer Kit
 
 ## Repository Structure
 
 This repository is currently ran by four main scripts to handle the entire workflow
 
-**'formatdata.py'**: Prepares the dataset by parsing YOLO format '.txt' polygon coordinates and converting them into binary '.png' masks which are required for SefFormer training
+**`formatdata.py`**: Prepares the dataset by parsing YOLO format `.txt` polygon coordinates and converting them into binary `.png` masks which are required for SefFormer training
 
-**'trainmodel.py'**: This fine tunes the 'nvidia/mit-b2' base model on the custom dataset for 50 epochs (50 full cylces through the dataset)
+**`trainmodel.py`**: This fine tunes the `nvidia/mit-b2` base model on the custom dataset for 50 epochs (50 full cylces through the dataset)
 
-**'viewmodeldata.py'**: This is used for evaulating the trained model against the full dataset to compute its accuracy, precision, recall, and mIoU, it also generates performace charts, and exports the metrics to an Excel file
+**`viewmodeldata.py`**: This is used for evaulating the trained model against the full dataset to compute its accuracy, precision, recall, and mIoU, it also generates performace charts, and exports the metrics to an Excel file
 
-**'testmodel.py'**: This launches a local Gradio web UI to test the model easily, it displays confidence scores, the segmented bounderies, and a side by side comparison between the original image and the predicated spill it also included a export option of the computed images
+**`testmodel.py`**: This launches a local Gradio web UI to test the model easily, it displays confidence scores, the segmented bounderies, and a side by side comparison between the original image and the predicated spill it also included a export option of the computed images
 
-## Setup and Installation=
+## Setup and Installation
 
 ### 1. Clone the repository:
 ```bash
@@ -58,7 +59,7 @@ python viewmodeldata.py
 
 ### 4. Test the Model (Web UI)
 
-Launch the Gradio detection dashboard to visually test the model. The server launches to 0.0.0.0:7860, which allows you to access the interface from any device on your local network:
+Launch the Gradio detection dashboard to visually test the model. The server launches to `0.0.0.0:7860`, which allows you to access the interface from any device on your local network:
 ```bash
 python testmodel.py
 ```
