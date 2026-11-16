@@ -63,7 +63,6 @@ def main():
         logging_steps=10,
     )
 
-    # Define metric
     metric = evaluate.load("mean_iou")
     
     def compute_metrics(eval_pred):
