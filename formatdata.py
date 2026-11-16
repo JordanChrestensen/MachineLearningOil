@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from glob import glob
 
-base_dir = r"C:\Users\Jordan\Downloads\machinelearningoil\train"
+base_dir = r"path_to_your_dataset_directory"  # Update this path to your dataset directory
 img_dir = os.path.join(base_dir, "images")
 lbl_dir = os.path.join(base_dir, "labels")
 mask_dir = os.path.join(base_dir, "masks")

@@ -31,9 +31,9 @@ class OilSpillDataset(Dataset):
         return inputs
 
 def main():
-    base_dir = r"C:\Users\Jordan\Downloads\machinelearningoil\train"
-    img_dir = os.path.join(base_dir, "images")
-    mask_dir = os.path.join(base_dir, "masks")
+    base_dir = r"path_to_your_dataset_directory"  # Update this path to your dataset directory
+    img_dir = os.path.join(base_dir, "path_to_your_images_directory")  # Update this path to your images directory
+    mask_dir = os.path.join(base_dir, "path_to_your_masks_directory")  # Update this path to your masks directory
 
     processor = SegformerImageProcessor.from_pretrained("nvidia/mit-b2")
     processor.reduce_labels = False 
@@ -51,7 +51,7 @@ def main():
     train_dataset = OilSpillDataset(img_dir, mask_dir, processor)
 
     training_args = TrainingArguments(
-        output_dir="./segformer-oil-spill",
+        output_dir="path_to_your_output_directory",  # Update this path to your desired output directory
         learning_rate=6e-5,
         num_train_epochs=50,
         per_device_train_batch_size=8, 
@@ -95,8 +95,8 @@ def main():
 
     trainer.train()
 
-    trainer.save_model("./segformer-oil-spill-final")
-    processor.save_pretrained("./segformer-oil-spill-final")
+    trainer.save_model("path_to_your_trained_model_directory")  # Update this path to your desired save directory
+    processor.save_pretrained("path_to_your_trained_model_directory")  # Update this path to your desired save directory
 
 if __name__ == "__main__":
     main()

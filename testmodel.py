@@ -5,7 +5,7 @@ import numpy as np
 from transformers import SegformerImageProcessor, SegformerForSemanticSegmentation
 from PIL import Image
 
-model_dir = "./segformer-oil-spill-final"
+model_dir = "path_to_your_trained_model_directory"  # Update this path to your trained model directory
 processor = SegformerImageProcessor.from_pretrained(model_dir)
 model = SegformerForSemanticSegmentation.from_pretrained(model_dir)
 
@@ -106,13 +106,13 @@ def predict_oil_spill(image):
 
     return output_frame, legend_md, export_path
 
-with gr.Blocks(title="UAV Oil Detection - SegFormer") as demo:
-    gr.Markdown("## UAV Oil Detection - SegFormer")
+with gr.Blocks(title="UAV Oil Detection SegFormer") as demo:
+    gr.Markdown("## UAV Oil Detection SegFormer")
     gr.Markdown("Upload an image ")
     
     with gr.Row():
         input_image = gr.Image(type="numpy", label="Upload Image", height=500, elem_classes="fit-image")
-        output_image = gr.Image(type="numpy", label="Oil Spills Outlined", height=500, elem_classes="fit-image")
+        output_image = gr.Image(type="numpy", label="Oil Spills", height=500, elem_classes="fit-image")
         
     with gr.Row():
         clear_btn = gr.ClearButton(components=[input_image, output_image], value="Clear")
