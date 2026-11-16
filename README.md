@@ -59,7 +59,7 @@ python trainmodel.py
 
 ### 3. View Model Data & Evaluate
 
-Analyze the trained weights. This script will iterate through the entire dataset, generate predictions, compare them against the true masks, and output .png performance graphs as well as an Excel report:
+Analyze the trained weights. This script will iterate through the entire dataset, generate predictions, compare them against the true masks, and output `.png` performance graphs as well as an Excel report:
 ```bash
 python viewmodeldata.py
 ```
