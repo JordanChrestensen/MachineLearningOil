@@ -5,14 +5,14 @@ This repository contains the machine learning pipeline for automated oil spill d
 The pipeline utilizes a custom trained **`SegFormer-B2`** instance segmentation model
 
 ## Hardware
-**`1Training Computer`**: NVIDIA RTX 5080 (64GB RAM)
-**`Planned`**: NVIDIA Jetson Orin Nano Super Developer Kit
+* **`Training Computer`**: NVIDIA RTX 5080 (64GB RAM)
+* **`Planned`**: NVIDIA Jetson Orin Nano Super Developer Kit
 
 ## Repository Structure
 
 This repository is currently ran by four main scripts to handle the entire workflow
 
-**`formatdata.py`**: Prepares the dataset by parsing YOLO format `.txt` polygon coordinates and converting them into binary `.png` masks which are required for SefFormer training
+**`formatdata.py`**: Prepares the dataset by parsing YOLO format `.txt` polygon coordinates and converting them into binary `.png` masks which are required for SegFormer training
 
 **`trainmodel.py`**: This fine tunes the `nvidia/mit-b2` base model on the custom dataset for 50 epochs (50 full cylces through the dataset)
 
