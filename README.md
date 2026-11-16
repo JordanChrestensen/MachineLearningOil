@@ -25,7 +25,7 @@ This repository is currently ran by four main scripts to handle the entire workf
 
 **`viewmodeldata.py`**: This is used for evaulating the trained model against the full dataset to compute its accuracy, precision, recall, and mIoU, it also generates performace charts, and exports the metrics to an Excel file
 
-**`testmodel.py`**: This launches a local Gradio web UI to test the model easily, it displays confidence scores, the segmented bounderies, and a side by side comparison between the original image and the predicated spill it also included a export option of the computed images
+**`testmodel.py`**: This launches a local Gradio web UI to test the model easily, it displays confidence scores, the segmented bounderies, and a side by side comparison between the original image and the predicated spill it also includes a export option of the computed images
 
 ## Setup and Installation
 
