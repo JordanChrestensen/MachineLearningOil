@@ -31,7 +31,7 @@ This repository is currently ran by four main scripts to handle the entire workf
 
 ### 1. Clone the repository:
 ```bash
-git clone [https://github.com/JordanChrestensen/MachineLearningOil.git](https://github.com/JordanChrestensen/MachineLearningOil.git)
+git clone https://github.com/JordanChrestensen/MachineLearningOil.git
 cd MachineLearningOil
 ```
 ### 2. Install the requried dependencies:
